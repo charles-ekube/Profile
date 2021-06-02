@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import './styles.css';
 import { ThemeContext } from '../../../Context/themeContext'
-import {ThemeToggle, CloseNavToggle} from '../../buttons';
+import {ThemeToggle} from '../../buttons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

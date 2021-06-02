@@ -8,7 +8,7 @@ import { Bobby } from '../../../assets';
 
 const Home = () => {
 
-    const {isLightTheme, light, dark, handleNav} = useContext(ThemeContext);
+    const {isLightTheme, light, dark} = useContext(ThemeContext);
     const theme = isLightTheme ? dark : light;
 
     return (
