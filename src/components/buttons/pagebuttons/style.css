@@ -1,0 +1,10 @@
+.previous-btn {
+    padding: 0;
+    position:absolute;
+    top: 5px;
+    left: 10px;
+    background:inherit;
+    border: none;
+    color:#fff;
+    font-size: 25px;
+}

@@ -1,46 +1,47 @@
-import React, {useContext} from 'react';
-import './styles.css';
-import { ThemeContext } from '../../../Context/themeContext'
-import {ThemeToggle} from '../../buttons';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useContext } from "react";
+import "./styles.css";
+import { ThemeContext } from "../../../Context/themeContext";
+import { CloseNavToggle } from "../../buttons";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
+  AOS.init();
+  const { showNav, closeNav } = useContext(ThemeContext);
 
-AOS.init();   
-const {isLightTheme, light, dark, showNav} = useContext(ThemeContext);
-    const theme = isLightTheme ? dark : light;
-
-return (
+  return (
     <>
-    {showNav ? (
-
-            <header>
-                <nav className='navbar ' style={{background:theme.ui, color:theme.syntax}}
-                 data-aos="fade-left"
-                 data-aos-easing="ease-in-out"
-                 data-aos-mirror="true"
-                 data-aos-once="false"
-                 >
-                    <ul className='navbar-list'>
-                        <li className='navbar-list-item'>Home</li>
-                        <li className='navbar-list-item'>About</li>
-                        <li className='navbar-list-item'>Skills</li>
-                        <li className='navbar-list-item'>Projects</li>
-                        <li className='navbar-list-item'><ThemeToggle/></li>
-                    </ul>
-                    {/* <CloseNavToggle/> */}
-                </nav>
-                
-            </header>
-
-
-    ): null}
-    
+      {showNav ? (
+        <header>
+          <nav
+            className="navbar animate__animated animate__fadeInDown "
+            id="header"
+          >
+            <ul className="navbar-list">
+              <li className="navbar-list-item" onClick={closeNav}>
+                <Link to="/">Home</Link>
+              </li>
+              <li className="navbar-list-item" onClick={closeNav}>
+                <Link to="/skills">Services</Link>
+              </li>
+              <li className="navbar-list-item" onClick={closeNav}>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li className="navbar-list-item" onClick={closeNav}>
+                <Link to="/playground">Playground</Link>
+              </li>
+              <li className="navbar-list-item" onClick={closeNav}>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+            <CloseNavToggle />
+          </nav>
+        </header>
+      ) : null}
     </>
-)
+  );
+};
 
-}
-
-export {Navbar}
+export { Navbar };

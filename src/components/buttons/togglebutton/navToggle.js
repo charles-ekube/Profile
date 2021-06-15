@@ -6,15 +6,15 @@ import './style.css';
 const NavTogglebutton = () => {
 
     
-    const {isLightTheme, light, dark, openNav} = useContext(ThemeContext);
-    const theme = isLightTheme ? dark : light;
+    const {openNav} = useContext(ThemeContext);
+ 
  
     return (
         <>
-            <button className='toggle-button' onClick={openNav} style={{background:theme.ui, color:theme.syntax}}> 
-                <span style={{background:theme.ui, borderColor:theme.syntax}}></span>
-                <span style={{background:theme.ui, borderColor:theme.syntax}}></span>
-                <span style={{background:theme.ui, borderColor:theme.syntax}}></span>
+            <button className='toggle-button' onClick={openNav}> 
+                <span ></span>
+                <span ></span>
+                <span ></span>
             </button>
         </>
     )

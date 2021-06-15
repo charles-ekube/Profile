@@ -1,20 +1,52 @@
-import React, { useContext }from 'react';
-import { ThemeContext } from '../../../Context/themeContext';
+import React from 'react';
 import './style.css';
 
 const ThemeToggle = () => {
 
-    const {handleToggle} = useContext(ThemeContext)
+//    let darkMode = localStorage.getItem('darkMode');
+
+
+//    const enableDarkMode = () => {
+//       document.body.classList.add('dark');
+//       localStorage.setItem('darkMode', 'enabled')
+//    }
+
+
+//    const disableDarkMode = () => {
+//     document.body.classList.remove('dark');
+//     localStorage.setItem('darkMode', null)
+//  }
+
+
+//  if(darkMode === 'enabled') {
+//    enableDarkMode();
+//  }
+
+//    const handleThemeToggle = () => {
+//     darkMode = localStorage.getItem('darkMode');
+//     if(darkMode !== 'enabled') {
+//       enableDarkMode();
+//     } 
+//     else {
+//       disableDarkMode()
+//     }
+//    }
+
+    
 
 
   return (
     <>
-    <div>
+    {/* <div>
+      
     <label className='switch' >
             <input type='checkbox' onClick={handleToggle}/>
             <span className='slider round'></span>
         </label>
-    </div>
+    </div> */}
+    <button >
+      darkMode
+    </button>
         
     </>
   )

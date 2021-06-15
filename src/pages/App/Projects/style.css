@@ -1,0 +1,21 @@
+@media only screen and (min-device-width: 200px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1)  {
+    .projects-title {
+        padding:30px 10px 0 10px;
+    }
+    .projects-container {
+        display:grid;
+        grid-template-columns:repeat(1, 1fr);
+        padding:10px;
+    }
+    .projects-card {
+        display:flex;
+        border:1px solid #ccc;
+        margin:20px 0;
+        padding:20px 10px 20px 15px;
+    }
+    .projects-card-title {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+}

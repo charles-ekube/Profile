@@ -6,114 +6,43 @@
     justify-content:space-between;
     align-items: flex-end;
     width: 40px;
-    padding:5px;
+    padding:5px 0 5px 5px;
     border: none;
-    position: absolute;
+    position: fixed;
     right:10px;
-    z-index: 5;
+    z-index: 2;
+    background:inherit;
 
 }
 .toggle-button span {
-    border: 1px solid;
+    border: 1px solid #fff;
     margin: 2px 0;
-    width: 100%;
+    width: 90%;
+    background:#fff;
 }
 .toggle-button span:nth-child(2) {
-    width: 80%;
+    width: 70%;
+    
 }
 .toggle-button span:nth-child(3) {
-    width: 60%;
+    width: 50%;
+    
 }
 
 /* end of navToggle button  */
-
-
-/* themeToggle switch  */
-.switch {
-    position: relative;
-    display:inline-block;
-    width: 60px;
-    height: 34px;
-}
-.switch input[type='checkbox'] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position:absolute;
-    cursor: pointer;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background:#ccc;
-    -webkit-transition: .4s;
-    transition:.4s;
-}
-
-.slider:before {
-    position:absolute;
-    content:"";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom:4px;
-    background: #fff;
-    -webkit-transition: .4s;
-    transition:.4s;
-}
-input[type="checkbox"]:checked + .slider {
-    background: #2196F3;
-}
-input[type="checkbox"]:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-input[type="checkbox"]:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-.slider.round {
-    border-radius: 34px;
-}
-.slider.round:before {
-    border-radius: 50%;
-}
-
-/* end of themeToggle switch  */
 
 
 /* close nav toggle  */
 .close-nav-btn {
     width: 40px;
     height:40px;
-   border: 1px solid #000;
-   background:red;
+   border: none;
    position: absolute;
-   top: 10px;
-   right: 10px;
-}
+   top: 0;
+   right: 0;
+   font-size: 30px;
+   background:inherit;
+   color:#fff;
 
-.close-nav-btn #close-left {
-    height: 25px;
-    width: 2px;
-    margin-left: 12px;
-    background-color: black;
-    transform: rotateX(45deg);
-    z-index: 1;
-    border: 1px solid black;
-   
 }
-.close-nav-btn #close-right {
-    height: 25px;
-    width: 2px;
-    background-color: black;
-    border: 1px solid black;
-    transform: rotateY(90deg);
-    z-index: 2;
-}
-
-
 /* end of close nav toggle  */
